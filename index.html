@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1b3e">
+  <meta name="description" content="Portfolio Sabian Abhista — pengembang web yang mengubah ide menjadi pengalaman digital yang bermakna.">
+  <title>Sabian Abhista — Developer & Creative Thinker</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // CSS lokal mengatur reset dan container; utility Tailwind tetap tersedia.
+    if (window.tailwind) tailwind.config = { corePlugins: { preflight: false, container: false } };
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="antialiased">
+  <a class="skip-link" href="#main">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="biann.me — Beranda">biann<span>.</span>me<span class="brand-dot">.</span></a>
+      <nav class="desktop-nav" aria-label="Navigasi utama" id="desktop-nav"></nav>
+      <div class="header-actions"><div class="socials header-socials" data-socials></div><button class="menu-button" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+    </div>
+  </header>
+  <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="mobile-menu-title">
+    <div class="drawer-top"><span class="brand" id="mobile-menu-title">biann<span>.</span>me.</span><button class="icon-button" id="menu-close" aria-label="Tutup menu">×</button></div>
+    <nav id="mobile-nav" aria-label="Navigasi mobile"></nav><div class="socials" data-socials></div><p class="small muted">Let's make something meaningful.</p>
+  </dialog>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-topline"><span><span class="status-dot"></span> AVAILABLE FOR COLLABORATION</span><span class="hero-location">BASED IN INDONESIA <span class="tiny-star">✳</span></span></div>
+        <div class="hero-grid">
+          <div class="hero-intro">
+            <p class="eyebrow"><span class="short-line"></span> HELLO, SAYA</p>
+            <h1>Sabian<br><span class="name-accent">Abhista<span class="name-period">.</span></span></h1>
+            <p class="hero-role">Web Developer <span>&</span><br>Creative Thinker</p>
+            <a href="#tentang" class="button button-beige">Tentang Saya <span aria-hidden="true">↗</span></a>
+            <div class="hero-note"><span class="hand-star" aria-hidden="true">✳</span><p>Turning ideas into<br><strong>meaningful experiences.</strong></p></div>
+          </div>
+          <div class="hero-visual">
+            <div class="portrait-halo"></div><div class="portrait-ring ring-one"></div><div class="portrait-ring ring-two"></div>
+            <span class="visual-star" aria-hidden="true">✦</span><span class="code-float" aria-hidden="true">&lt;/&gt;</span>
+            <img id="portrait" class="portrait" src="assets/sabian-portrait.png" alt="Sabian Abhista mengenakan jas almamater biru navy" width="640" height="900" fetchpriority="high">
+            <div class="portrait-label"><span class="label-icon" aria-hidden="true">⌘</span><div><strong>Code. Create. Connect.</strong><span>Building with purpose, always.</span></div><span class="label-dot"></span></div>
+          </div>
+          <div class="hero-about">
+            <span class="small section-marker">01 / INTRODUCTION</span>
+            <h2>A little<br>about me<span class="beige">.</span></h2>
+            <p id="hero-bio">Saya membangun pengalaman digital yang fungsional, intuitif, dan punya cerita. Senang mengeksplorasi teknologi dan mengubah ide menjadi karya nyata.</p>
+            <a class="text-link" href="#portofolio">Jelajahi karya saya <span aria-hidden="true">↗</span></a>
+            <div class="hero-social-block"><span class="small muted">FIND ME ON</span><div class="socials" data-socials></div></div>
+          </div>
+        </div>
+        <div class="hero-bottom"><a href="#tentang" class="scroll-cue"><span class="mouse-icon"><i></i></span> Scroll to explore <span aria-hidden="true">↓</span></a><p>GOOD DESIGN. CLEAN CODE. <span>REAL IMPACT.</span></p><span class="hero-year">PORTFOLIO — <span data-year></span></span></div>
+      </div>
+    </section>
+
+    <div class="stack-strip" aria-label="Teknologi pilihan"><div class="container stack-strip-inner"><span class="stack-caption">MY EVERYDAY<br><strong>TOOLKIT</strong></span><span><b class="react-symbol">⚛</b> React</span><span><b class="ts-symbol">TS</b> TypeScript</span><span><b class="tailwind-symbol">≈</b> Tailwind CSS</span><span><b class="python-symbol">⌘</b> Python</span><span><b class="git-symbol">◇</b> Git & GitHub</span><span><b class="figma-symbol">◉</b> Figma</span></div></div>
+
+    <section id="tentang" class="section container">
+      <div class="about-grid">
+        <div><p class="eyebrow"><span class="short-line"></span> TENTANG SAYA</p><h2 class="section-title">Rasa ingin tahu.<br>Ide yang tumbuh.<br><span class="serif-accent">Karya yang bermakna.</span></h2></div>
+        <div class="about-copy"><p class="lead" id="about-lead"></p><p class="muted" id="about-body"></p><div class="about-details"><span><span class="status-dot"></span> Terbuka untuk peluang baru</span><span>⌖ <span id="location"></span></span></div></div>
+      </div>
+      <div class="stats-grid" id="stats"></div>
+    </section>
+
+    <section id="layanan" class="section section-tinted">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow"><span class="short-line"></span> LAYANAN</p><h2 class="section-title">Ide Anda, <span class="serif-accent">saya wujudkan.</span></h2></div><p class="section-description">Dari konsep hingga layar.<br>Solusi digital yang dirancang dengan hati.</p></div><div class="services-grid" id="services"></div></div>
+    </section>
+
+    <section id="keahlian" class="section container skills-section"><div><p class="eyebrow"><span class="short-line"></span> KEAHLIAN</p><h2 class="section-title">Tools di balik<br><span class="serif-accent">setiap karya.</span></h2><p class="muted">Terus belajar, terus bereksperimen.<br>Teknologi berikut menemani proses kreatif saya.</p></div><div class="skills-groups" id="skills"></div></section>
+
+    <section id="pengalaman" class="section section-tinted"><div class="container experience-grid"><div class="experience-intro"><p class="eyebrow"><span class="short-line"></span> PENGALAMAN</p><h2 class="section-title">Setiap langkah,<br><span class="serif-accent">sebuah pelajaran.</span></h2><p class="muted">Bertumbuh lewat kolaborasi, tantangan,<br>dan pengalaman di dunia nyata.</p><div class="experience-decoration" aria-hidden="true">↗</div></div><div class="timeline" id="experience"></div></div></section>
+
+    <section id="prestasi" class="section container"><div class="section-heading"><div><p class="eyebrow"><span class="short-line"></span> PRESTASI & SERTIFIKASI</p><h2 class="section-title">Milestone kecil, <span class="serif-accent">semangat besar.</span></h2></div><span class="section-description">A little proof of the journey.</span></div><div id="achievements" class="achievements-grid"></div></section>
+
+    <section id="portofolio" class="section section-tinted"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span class="short-line"></span> SELECTED WORKS</p><h2 class="section-title">Dibuat dengan <span class="serif-accent">sepenuh hati.</span></h2></div><p class="section-description">Beberapa ide yang berhasil<br>menemukan bentuknya.</p></div><div class="project-toolbar"><div class="filter-tabs" role="group" aria-label="Filter proyek"><button class="filter-button active" data-filter="all" aria-pressed="true">Semua Proyek <span>03</span></button><button class="filter-button" data-filter="web" aria-pressed="false">Web Development</button><button class="filter-button" data-filter="design" aria-pressed="false">UI/UX Design</button></div><span class="small muted">A SELECTION OF MY WORK</span></div><div id="projects" class="projects-grid" aria-live="polite"></div><p class="sample-note">Frieren Showcase dapat dikunjungi melalui Live Demo. Kartu berlabel Konsep merupakan contoh isi portfolio.</p></div></section>
+
+    <section id="galeri" class="section container"><div class="section-heading"><div><p class="eyebrow"><span class="short-line"></span> DI BALIK LAYAR</p><h2 class="section-title">Bukan cuma <span class="serif-accent">tentang kode.</span></h2></div><p class="section-description">Momen, orang-orang, dan cerita<br>yang membuat perjalanan ini berwarna.</p></div><div class="gallery-grid" id="gallery"></div></section>
+
+    <section id="kontak" class="section contact-section"><div class="container contact-grid"><div><p class="eyebrow"><span class="short-line"></span> LET'S CONNECT</p><h2 class="contact-title">Punya ide?<br>Mari buat<br><span class="serif-accent">jadi nyata.</span><span class="contact-star" aria-hidden="true">✳</span></h2><p class="muted">Punya proyek menarik, peluang kolaborasi,<br>atau sekadar ingin menyapa? Saya siap mendengar.</p><a id="email-link" class="email-link" href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a><div class="socials" data-socials></div></div><form id="contact-form" class="contact-form"><h3>Mulai sebuah percakapan <span aria-hidden="true">↗</span></h3><div class="form-row"><div><label for="name">Nama Anda <span>*</span></label><input id="name" name="name" placeholder="Nama lengkap" required maxlength="100" autocomplete="name"></div><div><label for="email">Alamat email <span>*</span></label><input id="email" name="email" type="email" placeholder="nama@email.com" required maxlength="200" autocomplete="email"></div></div><label for="subject">Tentang apa?</label><select id="subject" name="subject"><option value="Kolaborasi proyek">Kolaborasi proyek</option><option value="Peluang kerja">Peluang kerja</option><option value="Sekadar menyapa">Sekadar menyapa</option><option value="Lainnya">Lainnya</option></select><label for="message">Ceritakan ide Anda <span>*</span></label><textarea id="message" name="message" rows="4" placeholder="Halo Sabian, saya ingin mendiskusikan..." required minlength="10" maxlength="3000"></textarea><button class="button button-beige" type="submit">Kirim Pesan <span aria-hidden="true">↗</span></button><p class="form-hint">Form ini membuka aplikasi email Anda dengan pesan yang sudah terisi.</p><p id="form-status" class="form-status" role="status"></p></form></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home">biann<span>.</span>me.</a><p>© <span data-year></span> <span id="footer-name">Sabian Abhista</span>. Crafted with care & a little coffee.</p><a href="#home" class="back-top">Kembali ke atas <span aria-hidden="true">↑</span></a></div></footer>
+
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close icon-button" aria-label="Tutup detail">×</button><div id="detail-content"></div></dialog>
+  <noscript><p class="noscript-notice">Aktifkan JavaScript untuk menampilkan konten portfolio lengkap dan menggunakan fitur interaktif.</p></noscript>
+</body>
+</html>
